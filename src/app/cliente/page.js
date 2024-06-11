@@ -1,10 +1,23 @@
-import { crearCliente } from "../actions/cliente";
+"use client";
+import { crearCliente } from "../../actions/cliente";
+import { useRef } from "react";
 
-export default function Home() {
+import { toast } from "react-toastify";
+
+export default function ClientePage() {
+  const formRef = useRef(null);
+
   return (
     <div className="row justify-content-center mt-5">
       <div className="col-md-6">
-        <form action={crearCliente}>
+        <form
+          action={async (formData) => {
+            const cliente = await crearCliente(formData);
+            console.log(cliente);
+            toast.success("Cliente creado");
+            formRef.current?.reset();
+          }}
+          ref={formRef}>
           <div className="mb-3">
             <label htmlFor="nombre" className="form-label">
               ¿Cuál es tu nombre?
@@ -32,9 +45,11 @@ export default function Home() {
               <option value="Next.js">Next.js</option>
             </select>
           </div>
-          <button type="submit" className="btn btn-primary">
-            Enviar
-          </button>
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <button type="submit" className="btn btn-primary">
+              Procesar Formulario
+            </button>
+          </div>
         </form>
       </div>
     </div>

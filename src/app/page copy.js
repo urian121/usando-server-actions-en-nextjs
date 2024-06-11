@@ -1,6 +1,29 @@
-import { crearCliente } from "../actions/cliente";
+import Image from "next/image";
+//import styles from "./page.module.css";
 
 export default function Home() {
+  const crearCliente = async (formData) => {
+    "use server";
+
+    if (
+      !formData.get("nombre") ||
+      !formData.get("lenguaje_backend") ||
+      !formData.get("framework_frontend")
+    )
+      return;
+
+    let cliente = formData.get("nombre");
+    let lenguaje_backend = formData.get("lenguaje_backend");
+    let framework_frontend = formData.get("framework_frontend");
+
+    const NewCliente = {
+      cliente,
+      lenguaje_backend,
+      framework_frontend,
+    };
+    console.log(NewCliente);
+  };
+
   return (
     <div className="row justify-content-center mt-5">
       <div className="col-md-6">

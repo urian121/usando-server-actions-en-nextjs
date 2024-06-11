@@ -1,36 +1,11 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Como usar Server Actions en Next.js
 
-## Getting Started
+##### El server Actions no evitar estar creando una Api Rest, ademas el server Actions puede funcional tanto lado servidor como cliente. Utilizar un servidor de acciones tiene varias ventajas. Simplifica el desarrollo al evitar la necesidad de crear y mantener una API REST, lo que reduce la sobrecarga de trabajo. Además, ofrece versatilidad, ya que puede funcionar tanto en el lado del servidor como en el del cliente, facilitando la integración con otros servicios y sistemas. Esto resulta en una implementación más eficiente y flexible, adaptable a diversos entornos y necesidades, lo que mejora la rapidez y la capacidad de respuesta en el desarrollo de aplicaciones.
 
-First, run the development server:
+##### Demo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+    https://www.youtube.com/watch?v=2eAstzL1u_s
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+##### Instalar la libreria react-toastify en Next.js para generar alertas
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    npm install --save react-toastify
